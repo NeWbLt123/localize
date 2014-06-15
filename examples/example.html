@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script src="../localizejs.js"></script>
+	<script>
+		localization.initialize(["fr", "en", "es"], "fr", "fr")
+
+		localization.addMessages([{name: 'hello', message: {fr: 'allo', en: 'hello', es: 'hola'}}, {name: 'yes', message: {fr: 'oui', en: 'yes', es: 'si'}}]);
+
+		console.log(localization.message('hello')); // prints: allo
+
+		console.log(localization.message('yes')); // prints: oui
+
+		console.log(localization.choose({fr: 1, en: 2, es: 3})); // prints: 1
+
+		localization.language("en");
+		
+		console.log(localization.choose({fr: 1, en: 2, es: 3})); // prints: 2
+		
+		console.log(localization.message('yes')); // prints: yes
+		
+		localization.language("es");
+		
+		console.log(localization.message('yes')); // prints: si
+
+	</script>
+</head>
+<body>
+</body>
+</html>
