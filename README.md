@@ -3,9 +3,7 @@ localizejs
 
 A small localization library in javascript
 
+How To Use
 ----------
-Usage
+Take a look at the examples in the [examples](https://github.com/NeWbLt123/localize/tree/master/examples) folder.
 
-    <script src="localizejs.js"></script>
-
-*TODO - rest of readme*
