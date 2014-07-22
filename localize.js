@@ -43,6 +43,13 @@
     _localization.getMessages = function(){
         return messages;
     };
+    
+    _localization.localizeText = function(text, arr){
+        arr.forEach(function(item){
+            text = text.split(item.name).join(getLang() == 1 ? item.replacement.en : item.replacement.fr);
+        });
+        return text;
+    }
 
 })(window);
 
